@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI产业链选股表</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#1a1d24; --card2:#21252e; --line:#2c313c;
+    --txt:#e6e8ee; --mut:#9aa3b2; --hi:#f5f7fa;
+    --hot:#e2554a; --warm:#e0913a; --cool:#3a9b78; --neu:#6b7280;
+    --core:rgba(58,155,120,.10); --debate:rgba(224,145,58,.10); --watch:rgba(107,114,128,.08);
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f6f7f9; --card:#fff; --card2:#f0f2f5; --line:#e2e5ea;
+      --txt:#1d2129; --mut:#5f6672; --hi:#0b0d12;
+      --core:rgba(58,155,120,.08); --debate:rgba(224,145,58,.08); --watch:rgba(107,114,128,.06); }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;padding:24px}
+  .wrap{max-width:1200px;margin:0 auto}
+  h1{font-size:22px;font-weight:600;margin:0 0 4px}
+  .sub{color:var(--mut);font-size:13px;margin-bottom:12px}
+  .legend{font-size:12px;color:var(--mut);margin:0 0 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 16px}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+  th,td{padding:9px 10px;text-align:left;font-size:12.5px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--card2);color:var(--mut);font-weight:500;font-size:11.5px;white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  td.num{text-align:center;font-weight:600}
+  .rank{font-weight:700;font-size:14px;text-align:center;color:var(--hi)}
+  .seg{font-weight:600;color:var(--hi);font-size:13px;white-space:nowrap}
+  .leaders{color:var(--mut);font-size:11.5px;white-space:nowrap}
+  .verdict{font-size:12px}
+  tr.core td{background:var(--core)}
+  tr.debate td{background:var(--debate)}
+  tr.watch td{background:var(--watch)}
+  tr.out td{opacity:.72}
+  .sect{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-top:16px}
+  .sect h3{margin:0 0 8px;font-size:14px;color:var(--hi)}
+  .sect li{font-size:12.5px;color:var(--mut);margin:4px 0}
+  .sect ol{margin:0;padding-left:20px}
+  .sect ul{margin:0;padding-left:20px}
+  .foot{color:var(--mut);font-size:11px;margin-top:14px}
+  .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  #saveImg{flex:none;cursor:pointer;border:1px solid var(--line);background:var(--card2);color:var(--txt);font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:8px;white-space:nowrap}
+  #saveImg:hover{border-color:var(--warm);color:var(--warm)}
+  #saveImg:disabled{opacity:.5;cursor:default}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1 id="title"></h1>
+    <button id="saveImg">📷 保存为图片</button>
+  </div>
+  <div class="sub" id="sub"></div>
+  <div class="legend" id="legend"></div>
+  <table>
+    <thead><tr>
+      <th style="width:36px">潜力</th><th>环节</th><th style="width:40px">紧缺</th>
+      <th style="width:52px">利润池</th><th style="width:52px">扩产难度</th><th style="width:52px">定价权</th>
+      <th style="width:56px">状态</th><th style="width:76px">边际</th><th>龙头</th>
+      <th style="width:92px">Forward PE</th><th style="width:70px">定价</th><th>结论</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="sect">
+    <h3>📌 操作分层</h3>
+    <ul id="tiers"></ul>
+  </div>
+  <div class="sect">
+    <h3>🧪 可证伪条款（触发即执行）</h3>
+    <ol id="falsifiers"></ol>
+  </div>
+  <div class="foot" id="foot"></div>
+</div>
+<script src="data.js"></script>
+<script src="html2canvas.min.js"></script>
+<script>
+(function(){
+  var d = window.STOCK_TABLE_DATA || {rows:[]};
+  function col(v){ return v>=8.5?'var(--hot)':v>=6.5?'var(--warm)':v>=4?'var(--neu)':'var(--cool)'; }
+  document.getElementById('title').textContent = (d.title||'') + ' ' + (d.version||'');
+  document.getElementById('sub').textContent = '数据时点 ' + (d.asOf||'');
+  document.getElementById('legend').textContent = d.ruleNote||'';
+  var rows = (d.rows||[]).map(function(r){
+    return '<tr class="'+(r.tier||'')+'">'
+      + '<td class="rank">'+r.rank+'</td>'
+      + '<td class="seg">'+r.segment+'</td>'
+      + '<td class="num" style="color:'+col(r.scarcity)+'">'+r.scarcity+'</td>'
+      + '<td class="num" style="color:'+col(r.pool)+'">'+r.pool+'</td>'
+      + '<td class="num" style="color:'+col(r.expand)+'">'+r.expand+'</td>'
+      + '<td class="num" style="color:'+col(r.pricing)+'">'+r.pricing+'</td>'
+      + '<td>'+r.status+'</td>'
+      + '<td>'+r.marginal+'</td>'
+      + '<td class="leaders">'+r.leaders+'</td>'
+      + '<td>'+r.fpe+'</td>'
+      + '<td>'+r.priced+'</td>'
+      + '<td class="verdict">'+r.verdict+'</td>'
+      + '</tr>';
+  }).join('');
+  document.getElementById('rows').innerHTML = rows;
+  document.getElementById('tiers').innerHTML = (d.tiers||[]).map(function(s){return '<li>'+s+'</li>';}).join('');
+  document.getElementById('falsifiers').innerHTML = (d.falsifiers||[]).map(function(s){return '<li>'+s+'</li>';}).join('');
+  document.getElementById('foot').textContent = (d.dataNote||'') + ' ' + (d.disclaimer||'');
+
+  var btn = document.getElementById('saveImg');
+  btn.addEventListener('click', function(){
+    if(typeof html2canvas === 'undefined'){ alert('截图组件未加载'); return; }
+    var wrap = document.querySelector('.wrap');
+    var label = btn.textContent;
+    btn.disabled = true; btn.textContent = '生成中…';
+    var bg = getComputedStyle(document.body).backgroundColor;
+    html2canvas(wrap, {backgroundColor:bg, scale:2, useCORS:true, ignoreElements:function(el){return el.id==='saveImg';}})
+      .then(function(canvas){
+        var a = document.createElement('a');
+        a.download = 'AI产业链选股表_'+(d.asOf||'')+'.png';
+        a.href = canvas.toDataURL('image/png');
+        a.click();
+        btn.disabled = false; btn.textContent = label;
+      })
+      .catch(function(e){ alert('生成失败：'+e); btn.disabled=false; btn.textContent=label; });
+  });
+})();
+</script>
+</body>
+</html>
