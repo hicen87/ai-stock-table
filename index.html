@@ -125,11 +125,17 @@
     var bg = getComputedStyle(document.body).backgroundColor;
     html2canvas(wrap, {backgroundColor:bg, scale:2, useCORS:true, ignoreElements:function(el){return el.id==='saveImg';}})
       .then(function(canvas){
-        var a = document.createElement('a');
-        a.download = 'AI产业链选股表_'+(d.asOf||'')+'.png';
-        a.href = canvas.toDataURL('image/png');
-        a.click();
-        btn.disabled = false; btn.textContent = label;
+        canvas.toBlob(function(blob){
+          var name = 'AI产业链选股表_'+(d.asOf||'')+'.png';
+          var file; try{ file = new File([blob], name, {type:'image/png'}); }catch(e){}
+          if(file && navigator.canShare && navigator.canShare({files:[file]})){
+            navigator.share({files:[file]}).catch(function(){});
+          } else {
+            var a = document.createElement('a');
+            a.download = name; a.href = URL.createObjectURL(blob); a.click();
+          }
+          btn.disabled = false; btn.textContent = label;
+        }, 'image/png');
       })
       .catch(function(e){ alert('生成失败：'+e); btn.disabled=false; btn.textContent=label; });
   });
