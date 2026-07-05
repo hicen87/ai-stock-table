@@ -15,12 +15,18 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Dataset","name":"AI产业链选股表","url":"https://stocks.brassivo.com/","inLanguage":"zh-CN","creator":{"@type":"Organization","name":"Brassivo Research","url":"https://brassivo.com/"},"description":"AI产业链15个环节按利润池持续性×边际变化×定价未充分程度排序，含紧缺度/扩产难度/定价权打分、龙头Forward PE、操作分层与可证伪条款，每周更新。","license":"https://brassivo.com/","isAccessibleForFree":true}
 </script>
+<script>(function(){var m=document.cookie.match(/brassivo_theme=(dark|light)/);document.documentElement.setAttribute('data-theme',m?m[1]:'light');})();</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d5449771637e48d198e5ad33e9d26d78"}'></script>
 <style>
   :root{
+    --bg:#f6f7f9; --card:#fff; --card2:#f0f2f5; --line:#e2e5ea;
+    --txt:#1d2129; --mut:#5f6672; --hi:#0b0d12;
+    --hot:#e2554a; --warm:#e0913a; --cool:#3a9b78; --neu:#6b7280;
+    --core:rgba(58,155,120,.08); --debate:rgba(224,145,58,.08); --watch:rgba(107,114,128,.06);
+  }
+  html[data-theme=dark]{
     --bg:#171a21; --card:#1f232c; --card2:#272c37; --line:#343a47;
     --txt:#e6e8ee; --mut:#9aa3b2; --hi:#f5f7fa;
-    --hot:#e2554a; --warm:#e0913a; --cool:#3a9b78; --neu:#6b7280;
     --core:rgba(58,155,120,.10); --debate:rgba(224,145,58,.10); --watch:rgba(107,114,128,.08);
   }
   *{box-sizing:border-box}
@@ -65,6 +71,7 @@
 <nav>
   <a href="https://brassivo.com" class="brand">Brassivo <span>· Stocks</span></a>
   <a href="https://investment.brassivo.com" style="margin-left:auto">Liquidity 流动性看板 →</a>
+  <button onclick="(function(){var d=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.cookie='brassivo_theme='+d+'; domain=.brassivo.com; path=/; max-age=31536000; SameSite=Lax';document.documentElement.setAttribute('data-theme',d);})()" style="cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--mut);font-size:12px;padding:4px 10px;border-radius:6px;white-space:nowrap">深色/浅色</button>
 </nav>
 <main>
 <div class="wrap">
