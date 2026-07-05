@@ -118,7 +118,7 @@
 (function(){
   var d = window.STOCK_TABLE_DATA || {rows:[]};
   function col(v){ return v>=8.5?'var(--hot)':v>=6.5?'var(--warm)':v>=4?'var(--neu)':'var(--cool)'; }
-  document.getElementById('title').textContent = (d.title||'') + ' ' + (d.version||'');
+  document.getElementById('title').textContent = (d.title||'');
   document.getElementById('sub').textContent = '数据时点 ' + (d.asOf||'');
   document.getElementById('legend').textContent = d.ruleNote||'';
   var rows = (d.rows||[]).map(function(r){
@@ -143,7 +143,7 @@
   document.getElementById('prules').innerHTML = (d.portfolioRules||[]).map(function(s){return '<li>'+s+'</li>';}).join('');
   document.getElementById('tiers').innerHTML = (d.tiers||[]).map(function(s){return '<li>'+s+'</li>';}).join('');
   document.getElementById('falsifiers').innerHTML = (d.falsifiers||[]).map(function(s){return '<li>'+s+'</li>';}).join('');
-  document.getElementById('foot').textContent = (d.dataNote||'') + ' ' + (d.disclaimer||'');
+  document.getElementById('foot').textContent = (d.version? d.version+' · ':'') + (d.dataNote||'') + ' ' + (d.disclaimer||'');
 
   var btn = document.getElementById('saveImg');
   function loadH2C(){
