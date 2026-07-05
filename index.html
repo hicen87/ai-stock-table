@@ -68,15 +68,23 @@
   </div>
   <div class="sub" id="sub"></div>
   <div class="legend" id="legend"></div>
+  <div class="sect" style="margin:0 0 16px">
+    <h3>📐 打分锚点（硬数据口径，分数不许脱离依据）</h3>
+    <ul id="anchors"></ul>
+  </div>
   <table>
     <thead><tr>
-      <th style="width:36px">潜力</th><th>环节</th><th style="width:40px">紧缺</th>
+      <th style="width:36px">潜力</th><th>环节 / 依据</th><th style="width:40px">紧缺</th>
       <th style="width:52px">利润池</th><th style="width:52px">扩产难度</th><th style="width:52px">定价权</th>
       <th style="width:56px">状态</th><th style="width:76px">边际</th><th>龙头</th>
-      <th style="width:92px">Forward PE</th><th style="width:70px">定价</th><th>结论</th>
+      <th style="width:150px">估值双锚（FPE / 第二锚）</th><th style="width:70px">定价</th><th>结论</th><th style="width:90px">仓位档</th>
     </tr></thead>
     <tbody id="rows"></tbody>
   </table>
+  <div class="sect">
+    <h3>🛡️ 组合规则（敞口 / 仓位 / 对冲 / 触发纪律）</h3>
+    <ul id="prules"></ul>
+  </div>
   <div class="sect">
     <h3>📌 操作分层</h3>
     <ul id="tiers"></ul>
@@ -99,7 +107,7 @@
   var rows = (d.rows||[]).map(function(r){
     return '<tr class="'+(r.tier||'')+'">'
       + '<td class="rank">'+r.rank+'</td>'
-      + '<td class="seg">'+r.segment+'</td>'
+      + '<td><div class="seg">'+r.segment+' <span style="font-weight:400;color:var(--mut);font-size:11px">['+(r.vtype||'')+']</span></div><div class="leaders" style="white-space:normal">'+(r.evidence||'')+'</div></td>'
       + '<td class="num" style="color:'+col(r.scarcity)+'">'+r.scarcity+'</td>'
       + '<td class="num" style="color:'+col(r.pool)+'">'+r.pool+'</td>'
       + '<td class="num" style="color:'+col(r.expand)+'">'+r.expand+'</td>'
@@ -107,12 +115,15 @@
       + '<td>'+r.status+'</td>'
       + '<td>'+r.marginal+'</td>'
       + '<td class="leaders">'+r.leaders+'</td>'
-      + '<td>'+r.fpe+'</td>'
+      + '<td><div>'+r.fpe+'</div><div class="leaders" style="white-space:normal">'+(r.anchor2||'')+'</div></td>'
       + '<td>'+r.priced+'</td>'
       + '<td class="verdict">'+r.verdict+'</td>'
+      + '<td style="font-weight:600;white-space:nowrap">'+(r.sizeBand||'—')+'</td>'
       + '</tr>';
   }).join('');
   document.getElementById('rows').innerHTML = rows;
+  document.getElementById('anchors').innerHTML = (d.scoreAnchors||[]).map(function(s){return '<li>'+s+'</li>';}).join('');
+  document.getElementById('prules').innerHTML = (d.portfolioRules||[]).map(function(s){return '<li>'+s+'</li>';}).join('');
   document.getElementById('tiers').innerHTML = (d.tiers||[]).map(function(s){return '<li>'+s+'</li>';}).join('');
   document.getElementById('falsifiers').innerHTML = (d.falsifiers||[]).map(function(s){return '<li>'+s+'</li>';}).join('');
   document.getElementById('foot').textContent = (d.dataNote||'') + ' ' + (d.disclaimer||'');
