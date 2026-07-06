@@ -110,6 +110,7 @@
     <ul id="anchors"></ul>
   </div>
   <div style="font-size:13px;color:var(--mut);margin:0 0 8px">图例 · <b>EPS±</b>（盈利边际）：🟢 增速加速 · 🟡 持平 · 🔴 减速　|　<b>状态</b>：✅ 正常 · ⚠️ 警戒　|　<b>定价圆点</b>：🟢 未充分 · 🟡 部分 · 🔴 充分</div>
+  <div style="font-size:13px;color:var(--mut);margin:0 0 8px"><b>潜力分</b>=长坡厚雪基分 √(利润池 × 持续性) × 斜度(边际) × 行动(定价)，持续性=∛(紧缺×扩产×定价权)；表格按潜力分自动降序，分数越高＝越长坡厚雪+边际向上+定价未充分。</div>
   <div class="tblwrap"><table>
     <thead><tr>
       <th style="width:36px">潜力</th><th>环节 / 依据</th><th style="width:40px">紧缺</th>
@@ -142,9 +143,18 @@
   document.getElementById('title').textContent = (d.title||'');
   document.getElementById('sub').textContent = '数据时点 ' + (d.asOf||'');
   document.getElementById('legend').textContent = d.ruleNote||'';
-  var rows = (d.rows||[]).map(function(r){
+  var coefM={'🟢':1.15,'🟡':1.0,'🔴':0.85};   // 边际=坡的斜度
+  var coefP={'🟢':1.15,'🟡':1.0,'🔴':0.82};   // 定价=是否行动
+  function potScore(r){
+    var dur=Math.cbrt((+r.scarcity||1)*(+r.expand||1)*(+r.pricing||1)); // 长坡:持续性=∛(紧缺×扩产×定价权)
+    var base=Math.sqrt((+r.pool||1)*dur);                              // 长坡厚雪基分=√(利润池×持续性)
+    return base*(coefM[r.marginal]||1)*(coefP[r.priced]||1);          // ×斜度×是否行动
+  }
+  var rows = (d.rows||[]).map(function(r){return {r:r,s:potScore(r)};})
+    .sort(function(a,b){return b.s-a.s;})
+    .map(function(o,i){ var r=o.r;
     return '<tr class="'+(r.tier||'')+'">'
-      + '<td class="rank" data-label="潜力">'+r.rank+'</td>'
+      + '<td class="rank" data-label="潜力">'+(i+1)+'<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:1px">'+o.s.toFixed(1)+'</div></td>'
       + '<td class="segcell" data-label="环节"><div class="seg">'+r.segment+' <span style="font-weight:400;color:var(--mut);font-size:13px">['+(r.vtype||'')+']</span></div><div class="leaders ev" style="white-space:normal">'+(r.evidence||'')+'</div></td>'
       + '<td class="num" data-label="紧缺" style="color:'+col(r.scarcity)+'">'+r.scarcity+'</td>'
       + '<td class="num" data-label="利润池" style="color:'+col(r.pool)+'">'+r.pool+'</td>'
