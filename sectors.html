@@ -60,16 +60,7 @@
   .sect ul{margin:0;padding-left:20px}
   .foot{color:var(--mut);font-size:13px;margin-top:14px}
   .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-  .sector-entry{display:flex;align-items:center;gap:14px;margin:0 0 16px;padding:13px 18px;border-radius:12px;
-    text-decoration:none;color:var(--txt);background:var(--card);border:1px solid var(--line);
-    background:linear-gradient(90deg,rgba(58,155,120,.10),rgba(224,145,58,.08)),var(--card);
-    transition:border-color .15s, transform .15s}
-  .sector-entry:hover{border-color:var(--cool);transform:translateY(-1px)}
-  .sector-entry .se-ico{font-size:24px;flex:none}
-  .sector-entry .se-title{font-weight:700;font-size:16px;color:var(--hi)}
-  .sector-entry .se-sub{font-size:13.5px;color:var(--mut)}
-  .sector-entry .se-arrow{margin-left:auto;font-size:20px;font-weight:700;color:var(--cool);flex:none}
-  @media(max-width:640px){.sector-entry{padding:11px 14px;gap:10px}.sector-entry .se-sub{font-size:12.5px}}
+  @media(max-width:640px){}
   #saveImg{flex:none;cursor:pointer;border:1px solid var(--line);background:var(--card2);color:var(--txt);font-size:15px;font-weight:600;padding:7px 14px;border-radius:8px;white-space:nowrap}
   #saveImg:hover{border-color:var(--warm);color:var(--warm)}
   #saveImg:disabled{opacity:.5;cursor:default}
@@ -93,12 +84,20 @@
     td[data-label="估值双锚"]::before{text-align:left;margin-bottom:2px}
     td[data-label="估值双锚"] .leaders{text-align:left}
   }
+  body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:radial-gradient(circle at 1px 1px, var(--dot) 1px, transparent 0);background-size:26px 26px;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 42%,transparent 78%);mask-image:linear-gradient(180deg,#000 0%,#000 42%,transparent 78%)}
+  body::after{content:"";position:fixed;top:-18vmax;left:50%;width:60vmax;height:60vmax;z-index:-1;pointer-events:none;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle, var(--glow) 0%, transparent 66%);opacity:.55;animation:bg-breathe 14s ease-in-out infinite}
+  :root{--dot:rgba(20,40,80,.09); --glow:rgba(224,145,58,.14)}
+  @keyframes bg-breathe{0%,100%{opacity:.42;transform:translateX(-50%) scale(1)}50%{opacity:.62;transform:translateX(-50%) scale(1.08)}}
+  @media(prefers-reduced-motion:reduce){body::after{animation:none}}
+  nav .brand img{width:22px;height:22px;border-radius:5px;vertical-align:-5px;margin-right:7px}
+  nav .brand{letter-spacing:.08em}
+  nav a.cur{color:var(--warm);font-weight:600}
 </style>
 </head>
 <body>
 <nav>
-  <a href="https://brassivo.com" class="brand">Brassivo <span>· US Sectors</span></a>
-  <a href="/" style="margin-left:auto">选股表 →</a><a href="https://investment.brassivo.com">Liquidity →</a><a href="https://china.brassivo.com">China Stocks →</a>
+  <a href="https://brassivo.com" class="brand"><img src="/favicon.svg" alt="Brassivo">BRASSIVO <span style="color:var(--warm);font-weight:700">RESEARCH</span></a>
+  <a href="https://investment.brassivo.com" style="margin-left:auto">宏观流动性</a><a href="https://stocks.brassivo.com/sectors.html" class="cur">美股板块</a><a href="https://china.brassivo.com/sectors.html">中国板块</a><a href="https://stocks.brassivo.com">美股个股</a><a href="https://china.brassivo.com">中国个股</a>
 </nav>
 <main>
 <div class="wrap">
@@ -108,14 +107,6 @@
   </div>
   <div class="sub" id="sub"></div>
   <div class="legend" id="legend"></div>
-  <a href="/" class="sector-entry">
-    <div class="se-ico">🔬</div>
-    <div class="se-txt">
-      <div class="se-title">AI产业链选股表</div>
-      <div class="se-sub">15个环节逐一打分 · 个股层决策以此为准 · 每周更新</div>
-    </div>
-    <div class="se-arrow">→</div>
-  </a>
   <div class="sect" style="margin:0 0 16px">
     <h3>📐 打分锚点（板块层口径，分数不许脱离依据）</h3>
     <ul id="anchors"></ul>
