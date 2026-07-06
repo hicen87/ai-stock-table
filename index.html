@@ -113,7 +113,7 @@
     <thead><tr>
       <th style="width:36px">潜力</th><th>环节 / 依据</th><th style="width:40px">紧缺</th>
       <th style="width:52px">利润池</th><th style="width:52px">扩产难度</th><th style="width:52px">定价权</th>
-      <th style="width:56px">状态</th><th style="width:76px">边际</th><th>龙头</th>
+      <th style="width:56px">状态</th><th style="width:76px">EPS±</th><th>龙头</th>
       <th style="width:150px">估值双锚（FPE / 第二锚）</th><th style="width:70px">定价</th><th>结论</th><th style="width:90px">仓位档</th>
     </tr></thead>
     <tbody id="rows"></tbody>
@@ -150,7 +150,7 @@
       + '<td class="num" data-label="扩产难度" style="color:'+col(r.expand)+'">'+r.expand+'</td>'
       + '<td class="num" data-label="定价权" style="color:'+col(r.pricing)+'">'+r.pricing+'</td>'
       + '<td data-label="状态">'+r.status+'</td>'
-      + '<td data-label="边际">'+r.marginal+'</td>'
+      + '<td data-label="EPS±">'+r.marginal+'</td>'
       + '<td class="leaders" data-label="龙头">'+r.leaders+'</td>'
       + '<td data-label="估值双锚"><div>'+r.fpe+'</div><div class="leaders" style="white-space:normal">'+(r.anchor2||'')+'</div></td>'
       + '<td data-label="定价">'+r.priced+'</td>'
