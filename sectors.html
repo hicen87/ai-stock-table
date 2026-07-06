@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global Stocks · AI产业链选股表 · Brassivo Research</title>
-<meta name="description" content="AI产业链15个环节（先进制程封装、云平台、GPU、ASIC、半导体设备、EDA、电力基建、HBM、光模块等）按质量×定价未充分程度排序的选股表，每周更新Forward PE与可证伪条款。">
+<title>US Sectors · 美股板块表现潜力表 · Brassivo Research</title>
+<meta name="description" content="美股11个GICS板块按利润池持续性×边际变化×定价未充分程度排序的潜力表，与AI产业链选股表同一打分框架，每周更新板块Forward PE与可证伪条款。">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://stocks.brassivo.com/">
+<link rel="canonical" href="https://stocks.brassivo.com/sectors.html">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Brassivo Research">
-<meta property="og:title" content="AI产业链选股表">
-<meta property="og:description" content="15个AI产业链环节的质量打分、Forward PE与操作分层，每周自动更新。">
-<meta property="og:url" content="https://stocks.brassivo.com/">
+<meta property="og:title" content="美股板块表现潜力表">
+<meta property="og:description" content="11个GICS板块的质量打分、Forward PE与操作分层，与AI产业链选股表同框架，每周自动更新。">
+<meta property="og:url" content="https://stocks.brassivo.com/sectors.html">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Dataset","name":"AI产业链选股表","url":"https://stocks.brassivo.com/","inLanguage":"zh-CN","creator":{"@type":"Organization","name":"Brassivo Research","url":"https://brassivo.com/"},"description":"AI产业链15个环节按利润池持续性×边际变化×定价未充分程度排序，含紧缺度/扩产难度/定价权打分、龙头Forward PE、操作分层与可证伪条款，每周更新。","license":"https://brassivo.com/","isAccessibleForFree":true}
+{"@context":"https://schema.org","@type":"Dataset","name":"美股板块表现潜力表","url":"https://stocks.brassivo.com/sectors.html","inLanguage":"zh-CN","creator":{"@type":"Organization","name":"Brassivo Research","url":"https://brassivo.com/"},"description":"美股11个GICS板块按利润池持续性×边际变化×定价未充分程度排序，含紧缺度/扩产难度/定价权打分、板块Forward PE、操作分层与可证伪条款，每周更新。","license":"https://brassivo.com/","isAccessibleForFree":true}
 </script>
 <script>(function(){var m=document.cookie.match(/brassivo_theme=(dark|light)/);document.documentElement.setAttribute('data-theme',m?m[1]:'light');})();</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "4987d2682bd0421fa3d3344aef66c1c0"}'></script>
@@ -68,13 +68,13 @@
   .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
   .sector-entry{display:flex;align-items:center;gap:14px;margin:0 0 16px;padding:13px 18px;border-radius:12px;
     text-decoration:none;color:var(--txt);background:var(--card);border:1px solid var(--line);
-    background:linear-gradient(90deg,rgba(224,145,58,.10),rgba(58,155,120,.08)),var(--card);
+    background:linear-gradient(90deg,rgba(58,155,120,.10),rgba(224,145,58,.08)),var(--card);
     transition:border-color .15s, transform .15s}
-  .sector-entry:hover{border-color:var(--warm);transform:translateY(-1px)}
+  .sector-entry:hover{border-color:var(--cool);transform:translateY(-1px)}
   .sector-entry .se-ico{font-size:24px;flex:none}
   .sector-entry .se-title{font-weight:700;font-size:16px;color:var(--hi)}
   .sector-entry .se-sub{font-size:13.5px;color:var(--mut)}
-  .sector-entry .se-arrow{margin-left:auto;font-size:20px;font-weight:700;color:var(--warm);flex:none}
+  .sector-entry .se-arrow{margin-left:auto;font-size:20px;font-weight:700;color:var(--cool);flex:none}
   @media(max-width:640px){.sector-entry{padding:11px 14px;gap:10px}.sector-entry .se-sub{font-size:12.5px}}
   #saveImg{flex:none;cursor:pointer;border:1px solid var(--line);background:var(--card2);color:var(--txt);font-size:15px;font-weight:600;padding:7px 14px;border-radius:8px;white-space:nowrap}
   #saveImg:hover{border-color:var(--warm);color:var(--warm)}
@@ -103,8 +103,8 @@
 </head>
 <body>
 <nav>
-  <a href="https://brassivo.com" class="brand">Brassivo <span>· Global Stocks</span></a>
-  <a href="/sectors.html" style="margin-left:auto">板块潜力 →</a><a href="https://investment.brassivo.com">Liquidity →</a><a href="https://china.brassivo.com">China Stocks →</a>
+  <a href="https://brassivo.com" class="brand">Brassivo <span>· US Sectors</span></a>
+  <a href="/" style="margin-left:auto">选股表 →</a><a href="https://investment.brassivo.com">Liquidity →</a><a href="https://china.brassivo.com">China Stocks →</a>
   <button onclick="(function(){var d=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.cookie='brassivo_theme='+d+'; domain=.brassivo.com; path=/; max-age=31536000; SameSite=Lax';document.documentElement.setAttribute('data-theme',d);})()" style="cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--mut);font-size:14px;padding:4px 10px;border-radius:6px;white-space:nowrap">深色/浅色</button>
 </nav>
 <main>
@@ -115,31 +115,31 @@
   </div>
   <div class="sub" id="sub"></div>
   <div class="legend" id="legend"></div>
-  <a href="/sectors.html" class="sector-entry">
-    <div class="se-ico">🧭</div>
+  <a href="/" class="sector-entry">
+    <div class="se-ico">🔬</div>
     <div class="se-txt">
-      <div class="se-title">美股板块表现潜力表</div>
-      <div class="se-sub">11个GICS板块 · 同一打分框架的上层视图 · 每周更新</div>
+      <div class="se-title">AI产业链选股表</div>
+      <div class="se-sub">15个环节逐一打分 · 个股层决策以此为准 · 每周更新</div>
     </div>
     <div class="se-arrow">→</div>
   </a>
   <div class="sect" style="margin:0 0 16px">
-    <h3>📐 打分锚点（硬数据口径，分数不许脱离依据）</h3>
+    <h3>📐 打分锚点（板块层口径，分数不许脱离依据）</h3>
     <ul id="anchors"></ul>
   </div>
   <div style="font-size:13px;color:var(--mut);margin:0 0 8px">图例 · <b>EPS±</b>（盈利边际）：🟢 增速加速 · 🟡 持平 · 🔴 减速　|　<b>状态</b>：✅ 正常 · ⚠️ 警戒　|　<b>定价圆点</b>：🟢 未充分 · 🟡 部分 · 🔴 充分</div>
-  <div style="font-size:13px;color:var(--mut);margin:0 0 8px"><b>潜力分</b>=长坡厚雪基分 √(利润池 × 持续性) × 斜度(边际) × 行动(定价)，持续性=∛(紧缺×扩产×定价权)；表格按潜力分自动降序，分数越高＝越长坡厚雪+边际向上+定价未充分。</div>
+  <div style="font-size:13px;color:var(--mut);margin:0 0 8px"><b>潜力分</b>=长坡厚雪基分 √(利润池 × 持续性) × 斜度(边际) × 行动(定价)，持续性=∛(紧缺×扩产×定价权)；表格按潜力分自动降序，与个股选股表完全同一公式。</div>
   <div class="tblwrap"><table>
     <thead><tr>
-      <th style="width:36px">潜力</th><th>环节 / 依据</th><th style="width:40px">紧缺</th>
+      <th style="width:36px">潜力</th><th>板块 / 依据</th><th style="width:40px">紧缺</th>
       <th style="width:52px">利润池</th><th style="width:52px">扩产难度</th><th style="width:52px">定价权</th>
-      <th style="width:56px">状态</th><th style="width:76px">EPS±</th><th>龙头</th>
+      <th style="width:56px">状态</th><th style="width:76px">EPS±</th><th>工具/龙头</th>
       <th style="width:150px">估值双锚（FPE / 第二锚）</th><th style="width:70px">定价</th><th>结论</th><th style="width:90px">仓位档</th>
     </tr></thead>
     <tbody id="rows"></tbody>
   </table></div>
   <div class="sect">
-    <h3>🛡️ 组合规则（敞口 / 仓位 / 对冲 / 触发纪律）</h3>
+    <h3>🛡️ 组合规则（与个股选股表的联动关系）</h3>
     <ul id="prules"></ul>
   </div>
   <div class="sect">
@@ -153,38 +153,38 @@
   <div class="foot" id="foot"></div>
 </div>
 </main>
-<script src="data.js"></script>
+<script src="sectors_data.js"></script>
 <script>
 (function(){
-  var d = window.STOCK_TABLE_DATA || {rows:[]};
+  var d = window.SECTOR_TABLE_DATA || {rows:[]};
   function col(v){ return v>=8.5?'var(--hot)':v>=6.5?'var(--warm)':v>=4?'var(--neu)':'var(--cool)'; }
   document.getElementById('title').textContent = (d.title||'');
   document.getElementById('sub').textContent = '数据时点 ' + (d.asOf||'');
   document.getElementById('legend').textContent = d.ruleNote||'';
-  var coefM={'🟢':1.15,'🟡':1.0,'🔴':0.85};   // 边际=坡的斜度
-  var coefP={'🟢':1.15,'🟡':1.0,'🔴':0.82};   // 定价=是否行动
+  var coefM={'🟢':1.15,'🟡':1.0,'🔴':0.85};
+  var coefP={'🟢':1.15,'🟡':1.0,'🔴':0.82};
   function potScore(r){
-    var dur=Math.cbrt((+r.scarcity||1)*(+r.expand||1)*(+r.pricing||1)); // 长坡:持续性=∛(紧缺×扩产×定价权)
-    var base=Math.sqrt((+r.pool||1)*dur);                              // 长坡厚雪基分=√(利润池×持续性)
-    return base*(coefM[r.marginal]||1)*(coefP[r.priced]||1);          // ×斜度×是否行动
+    var dur=Math.cbrt((+r.scarcity||1)*(+r.expand||1)*(+r.pricing||1));
+    var base=Math.sqrt((+r.pool||1)*dur);
+    return base*(coefM[r.marginal]||1)*(coefP[r.priced]||1);
   }
   var rows = (d.rows||[]).map(function(r){return {r:r,s:potScore(r)};})
     .sort(function(a,b){return b.s-a.s;})
     .map(function(o,i){ var r=o.r;
     return '<tr class="'+(r.tier||'')+'">'
       + '<td class="rank" data-label="潜力">'+(i+1)+'<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:1px">'+o.s.toFixed(1)+'</div></td>'
-      + '<td class="segcell" data-label="环节"><div class="seg">'+r.segment+' <span style="font-weight:400;color:var(--mut);font-size:13px">['+(r.vtype||'')+']</span></div><div class="leaders ev" style="white-space:normal">'+(r.evidence||'')+'</div></td>'
+      + '<td class="segcell" data-label="板块"><div class="seg">'+r.segment+' <span style="font-weight:400;color:var(--mut);font-size:13px">['+(r.vtype||'')+']</span></div><div class="leaders ev" style="white-space:normal">'+(r.evidence||'')+'</div></td>'
       + '<td class="num" data-label="紧缺" style="color:'+col(r.scarcity)+'">'+r.scarcity+'</td>'
       + '<td class="num" data-label="利润池" style="color:'+col(r.pool)+'">'+r.pool+'</td>'
       + '<td class="num" data-label="扩产难度" style="color:'+col(r.expand)+'">'+r.expand+'</td>'
       + '<td class="num" data-label="定价权" style="color:'+col(r.pricing)+'">'+r.pricing+'</td>'
       + '<td data-label="状态">'+r.status+'</td>'
       + '<td data-label="EPS±">'+r.marginal+'</td>'
-      + '<td class="leaders" data-label="龙头">'+r.leaders+'</td>'
+      + '<td class="leaders" data-label="工具/龙头">'+r.leaders+'</td>'
       + '<td data-label="估值双锚"><div>'+r.fpe+'</div><div class="leaders" style="white-space:normal">'+(r.anchor2||'')+'</div></td>'
       + '<td data-label="定价">'+r.priced+'</td>'
       + '<td class="verdict" data-label="结论">'+r.verdict+'</td>'
-      + '<td data-label="仓位档" style="font-weight:600;white-space:nowrap">'+(r.sizeBand||'—')+'</td>'
+      + '<td data-label="仓位档" style="font-weight:600;white-space:normal">'+(r.sizeBand||'—')+'</td>'
       + '</tr>';
   }).join('');
   document.getElementById('rows').innerHTML = rows;
@@ -212,7 +212,7 @@
     return html2canvas(wrap, {backgroundColor:bg, scale:2, useCORS:true, ignoreElements:function(el){return el.id==='saveImg';}})
       .then(function(canvas){
         canvas.toBlob(function(blob){
-          var name = 'AI产业链选股表_'+(d.asOf||'')+'.png';
+          var name = '美股板块潜力表_'+(d.asOf||'')+'.png';
           var file; try{ file = new File([blob], name, {type:'image/png'}); }catch(e){}
           if(file && navigator.canShare && navigator.canShare({files:[file]})){
             navigator.share({files:[file]}).catch(function(){});
