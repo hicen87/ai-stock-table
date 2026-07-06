@@ -69,6 +69,14 @@
   #saveImg{flex:none;cursor:pointer;border:1px solid var(--line);background:var(--card2);color:var(--txt);font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:8px;white-space:nowrap}
   #saveImg:hover{border-color:var(--warm);color:var(--warm)}
   #saveImg:disabled{opacity:.5;cursor:default}
+  @media(max-width:640px){
+    table{min-width:680px}
+    .segcell{cursor:pointer}
+    .segcell .ev{display:none}
+    .segcell.open .ev{display:block;margin-top:4px}
+    .segcell .seg::after{content:' \25B8';color:var(--mut);font-weight:400}
+    .segcell.open .seg::after{content:' \25BE'}
+  }
 </style>
 </head>
 <body>
@@ -124,7 +132,7 @@
   var rows = (d.rows||[]).map(function(r){
     return '<tr class="'+(r.tier||'')+'">'
       + '<td class="rank">'+r.rank+'</td>'
-      + '<td><div class="seg">'+r.segment+' <span style="font-weight:400;color:var(--mut);font-size:11px">['+(r.vtype||'')+']</span></div><div class="leaders" style="white-space:normal">'+(r.evidence||'')+'</div></td>'
+      + '<td class="segcell" onclick="this.classList.toggle(\'open\')"><div class="seg">'+r.segment+' <span style="font-weight:400;color:var(--mut);font-size:11px">['+(r.vtype||'')+']</span></div><div class="leaders ev" style="white-space:normal">'+(r.evidence||'')+'</div></td>'
       + '<td class="num" style="color:'+col(r.scarcity)+'">'+r.scarcity+'</td>'
       + '<td class="num" style="color:'+col(r.pool)+'">'+r.pool+'</td>'
       + '<td class="num" style="color:'+col(r.expand)+'">'+r.expand+'</td>'
