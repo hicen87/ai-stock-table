@@ -13,19 +13,19 @@ window.SECTOR_TABLE_DATA = {
   rows: [
     { rank: 1, segment: "信息技术", vtype: "成长", scarcity: 8, pool: 10, expand: 8, pricing: 8, status: "✅", marginal: "🟢", leaders: "XLK · MSFT/NVDA/AVGO", fpe: "≈21.7", anchor2: "vs 标普溢价仅6%，处5年溢价区间低位；但3/31以来板块价格+29.2%为11板块最大涨幅", priced: "🟡", verdict: "核心池", tier: "core", sizeBand: "映射个股表1-5行",
       evidence: "Q2 EPS预期+63.3%（半导体行业+131%）；44家发正面指引创2006年以来纪录；CY26上修+9.1%" },
-    { rank: 2, segment: "公用事业", vtype: "防御+成长", scarcity: 9, pool: 5, expand: 9, pricing: 8, status: "✅", marginal: "🟡", leaders: "XLU · NEE/CEG/VST", fpe: "≈18（FactSet未公布端值，周更核准）", anchor2: "监管资产回报率上调周期；数据中心购电协议提供多年能见度；SSGA盈利sentiment已转负（-0.77，11板块垫底）", priced: "🟡", verdict: "核心候选：盈利修正转正即回核心池", tier: "watch", sizeBand: "0 → 触发后4-6%",
+    { rank: 2, segment: "公用事业", vtype: "防御+成长", scarcity: 9, pool: 5, expand: 9, pricing: 8, status: "✅", marginal: "🟡", leaders: "XLU · NEE/CEG/VST", fpe: "19.0（SPDR XLU FY1口径，7/2）", anchor2: "监管资产回报率上调周期；数据中心购电协议提供多年能见度；SSGA盈利sentiment已转负（-0.77，11板块垫底）", priced: "🟡", verdict: "核心候选：盈利修正转正即回核心池", tier: "watch", sizeBand: "0 → 触发后4-6%",
       evidence: "接网排队4-7年=紧缺度9、牌照基建=扩产难度9未变；但强势跑赢后开始跑输、EPS修正转平（SSGA 3个月修正-0.39）——长坡仍在、斜度暂失" },
-    { rank: 3, segment: "通信服务", vtype: "成长", scarcity: 6, pool: 9, expand: 7, pricing: 8, status: "✅", marginal: "🟢", leaders: "XLC · GOOGL/META", fpe: "≈19（待周更校准）", anchor2: "FPE低于标普大盘=大型平台罕见折价；分析师目标价隐含+25.9%（11板块第二高）", priced: "🟢", verdict: "核心池", tier: "core", sizeBand: "含于云平台仓位",
+    { rank: 3, segment: "通信服务", vtype: "成长", scarcity: 6, pool: 9, expand: 7, pricing: 8, status: "✅", marginal: "🟢", leaders: "XLC · GOOGL/META", fpe: "14.3（SPDR XLC FY1口径，7/2）", anchor2: "FY1口径14.3为11板块最低档=大型平台罕见折价（注意FY1系统性低于NTM口径1-2挡）；分析师目标价隐含+25.9%（11板块第二高）", priced: "🟢", verdict: "核心池", tier: "core", sizeBand: "含于云平台仓位",
       evidence: "CY26 EPS上修+12.5%（仅次能源）；Q2营收预期+13.7%板块第三；风险同个股表#2：capex吞噬现金流" },
     { rank: 4, segment: "金融", vtype: "利率敏感", scarcity: 4, pool: 8, expand: 6, pricing: 5, status: "✅", marginal: "🟡", leaders: "XLF · JPM/BRK", fpe: "15.3", anchor2: "vs 标普折价25%，处历史折价偏深位置；降息周期利好投行/资管管道", priced: "🟢", verdict: "观察：盈利修正转🟢即入", tier: "watch", sizeBand: "0 → 触发后4-6%",
       evidence: "估值便宜是真便宜（非周期顶陷阱），但缺紧缺逻辑，潜力分靠定价未充分撑" },
     { rank: 5, segment: "能源", vtype: "周期", scarcity: 7, pool: 7, expand: 7, pricing: 5, status: "⚠️", marginal: "🟢顶部预警", leaders: "XLE · XOM/CVX", fpe: "12.4（周期品禁用FPE排序）", anchor2: "周期锚：Q2 EPS +122.1%为11板块最高（油价$92.55、同比+45%）=高基数警戒；但3/31以来板块价格-14.5%为11板块最大跌幅——盈利上修与股价下跌罕见背离", priced: "⚠️陷阱候选", verdict: "同HBM逻辑：EPS越好离顶越近；背离值得跟踪但不改周期纪律", tier: "debate", sizeBand: "0-3%",
       evidence: "CY26上修+41.2%全场最大、CVX EPS预期近翻倍；低PE+盈利爆发=教科书周期中后段特征，与个股表HBM行同一纪律" },
-    { rank: 6, segment: "医疗保健", vtype: "防御", scarcity: 5, pool: 7, expand: 7, pricing: 6, status: "✅", marginal: "🟡", leaders: "XLV · LLY/UNH", fpe: "≈17（FactSet未公布端值，周更核准）", anchor2: "vs 标普折价+自身5年中枢下沿；表观EPS大幅下修（Q2 -15.3%）主因Gilead一次性IPR&D $115亿，剔除后Q2实际+6.5%增长", priced: "🟢", verdict: "观察：CY26修正（现-3.4%）转正即入", tier: "watch", sizeBand: "0 → 触发后4-6%",
+    { rank: 6, segment: "医疗保健", vtype: "防御", scarcity: 5, pool: 7, expand: 7, pricing: 6, status: "✅", marginal: "🟡", leaders: "XLV · LLY/UNH", fpe: "17.7（SPDR XLV FY1口径，3/31，7月约18-19）", anchor2: "vs 标普折价+自身5年中枢下沿；表观EPS大幅下修（Q2 -15.3%）主因Gilead一次性IPR&D $115亿，剔除后Q2实际+6.5%增长", priced: "🟢", verdict: "观察：CY26修正（现-3.4%）转正即入", tier: "watch", sizeBand: "0 → 触发后4-6%",
       evidence: "唯一Q2预期负增长板块（-9.5%），但3/31以来股价+8.9%=市场已识别一次性因素；GLP-1利润池真实" },
     { rank: 7, segment: "工业", vtype: "周期成长", scarcity: 7, pool: 6, expand: 7, pricing: 6, status: "✅", marginal: "🟢", leaders: "XLI · GE/ETN/CAT", fpe: "26.0", anchor2: "vs 标普溢价27%=历史溢价高位；电气化/回流叙事已充分计价", priced: "🔴", verdict: "好生意贵价格：回调至FPE 22以下再看", tier: "watch", sizeBand: "0 → 触发后3-5%",
       evidence: "与个股表GEV同病：紧缺真实但FPE 26已是11板块最贵之一" },
-    { rank: 8, segment: "必需消费", vtype: "防御", scarcity: 3, pool: 5, expand: 4, pricing: 5, status: "⚠️", marginal: "🔴", leaders: "XLP · COST/PG", fpe: "≈20（FactSet未公布端值，周更核准）", anchor2: "防御板块却无估值折价；通胀重回财报热词=成本端再承压", priced: "🟡", verdict: "暂不跟", tier: "out", sizeBand: "0",
+    { rank: 8, segment: "必需消费", vtype: "防御", scarcity: 3, pool: 5, expand: 4, pricing: 5, status: "⚠️", marginal: "🔴", leaders: "XLP · COST/PG", fpe: "19.6（SPDR XLP FY1口径，3/31）", anchor2: "防御板块却无估值折价；通胀重回财报热词=成本端再承压", priced: "🟡", verdict: "暂不跟", tier: "out", sizeBand: "0",
       evidence: "CY26 EPS下修-0.7%（仅两个下修板块之一）确认🔴；Buy评级占比44%全场最低；紧缺度3触及警戒线" },
     { rank: 9, segment: "材料", vtype: "周期", scarcity: 5, pool: 4, expand: 5, pricing: 4, status: "⚠️", marginal: "🟢", leaders: "XLB · LIN/FCX", fpe: "≈19（周期品禁用FPE排序）", anchor2: "Q2 EPS预期+35.2%（板块第三）、CY26上修+8.2%；但上修主力是Dow/LYB化工困境反转而非铜", priced: "🟡", verdict: "暂不跟：要铜敞口直接买铜矿个股", tier: "out", sizeBand: "0",
       evidence: "金属采矿+44%/化工+43%全线转正，周期反转确认；但板块工具（XLB）表达不了铜逻辑，且化工反转属低质量弹性" },
@@ -56,6 +56,6 @@ window.SECTOR_TABLE_DATA = {
     "任一hyperscaler下调capex → 科技/公用/工业三板块同步复检（与个股表条款#4联动）",
     "10年期利率快速上行50bp+ → 公用/地产利率敏感腿减半"
   ],
-  dataNote: "估值：FactSet Earnings Insight 2026-07-02官方报告（标普FPE 20.4、可选消费26.1与工业26.0最高、能源12.4与金融15.3最低；FactSet仅公布两端，中间板块FPE为估算值≈标注）+ MacroMicro（科技≈21.7，7/3）· 基本面：FactSet 7/2（Q2 EPS预期+23.3%、季内上修+3.4%为2021以来最大；能源+122.1%/科技+63.3%/材料+35.2%领跑、医疗-9.5%垫底主因Gilead一次性；标普bottom-up目标价8947、隐含+19.6%）+ State Street Sector Scorecard 2026年5月刊（公用/地产盈利sentiment垫底）",
+  dataNote: "估值：FactSet Earnings Insight 2026-07-02官方报告（标普FPE 20.4、可选消费26.1与工业26.0最高、能源12.4与金融15.3最低）+ SPDR板块ETF FY1 PE（XLC 14.3/XLU 19.0为7/2口径，XLV 17.7/XLP 19.6为3/31 factsheet口径；注意FY1系统性低于FactSet NTM口径，两套锚不可直接横比）+ MacroMicro（科技≈21.7，7/3）· 基本面：FactSet 7/2（Q2 EPS预期+23.3%、季内上修+3.4%为2021以来最大；能源+122.1%/科技+63.3%/材料+35.2%领跑、医疗-9.5%垫底主因Gilead一次性；标普bottom-up目标价8947、隐含+19.6%）+ State Street Sector Scorecard 2026年5月刊（公用/地产盈利sentiment垫底）",
   disclaimer: "⚠️ 本表为板块层参考视图，非买卖建议；个股决策以个股选股表+模块B为准；非持牌投顾意见。"
 };
