@@ -1,5 +1,5 @@
 window.SECTOR_TABLE_DATA = {
-  asOf: "2026-07-06",
+  asOf: "2026-07-10",
   version: "v1.0",
   title: "美股板块表现潜力表",
   ruleNote: "与个股选股表同一框架：潜力 = 质量（利润池持续性 × 边际变化）× 定价未充分程度。持续性 = 紧缺度 × 扩产难度 × 定价权（相乘，任一≤3警戒）。板块层面口径映射：紧缺度=板块供需缺口（产能/劳动力/牌照）；扩产难度=新进入者复制该板块盈利的年限；定价权=板块整体提价能力。估值锚=板块Forward PE vs 标普500（20.4）及自身5年中枢。质量分低频更新；FPE每周联网刷新。",
@@ -56,6 +56,6 @@ window.SECTOR_TABLE_DATA = {
     "任一hyperscaler下调capex → 科技/公用/工业三板块同步复检（与个股表条款#4联动）",
     "10年期利率快速上行50bp+ → 公用/地产利率敏感腿减半"
   ],
-  dataNote: "估值：FactSet Earnings Insight 2026-07-02官方报告（标普FPE 20.4、可选消费26.1与工业26.0最高、能源12.4与金融15.3最低）+ SPDR板块ETF FY1 PE（XLC 14.3/XLU 19.0为7/2口径，XLV 17.7/XLP 19.6为3/31 factsheet口径；注意FY1系统性低于FactSet NTM口径，两套锚不可直接横比）+ MacroMicro（科技≈21.7，7/3）· 基本面：FactSet 7/2（Q2 EPS预期+23.3%、季内上修+3.4%为2021以来最大；能源+122.1%/科技+63.3%/材料+35.2%领跑、医疗-9.5%垫底主因Gilead一次性；标普bottom-up目标价8947、隐含+19.6%）+ State Street Sector Scorecard 2026年5月刊（公用/地产盈利sentiment垫底）",
+  dataNote: "估值：FactSet Earnings Insight 2026-07（标普FPE维持20.4，高于10年均值19.0；可选消费26.1与工业26.0最高、能源12.4与金融15.3最低——一周内板块FPE基本无变化）+ SPDR板块ETF FY1 PE（XLC 14.3/XLU 19.0为7/2口径，XLV 17.7/XLP 19.6为3/31 factsheet口径；注意FY1系统性低于FactSet NTM口径，两套锚不可直接横比）+ MacroMicro（科技≈21.7）· 基本面：FactSet（Q2 EPS预期+23.3%、季内上修为2021以来最大；Q3预期+26.8%/Q4+24.4%/CY26+24.1%；6个板块dollar-EPS上修由能源/科技/材料领跑、5个下修由医疗领跑——方向与上周一致，无板块翻转）+ State Street Sector Scorecard（公用/地产盈利sentiment垫底）· 本周无可证伪条款触发",
   disclaimer: "⚠️ 本表为板块层参考视图，非买卖建议；个股决策以个股选股表+模块B为准；非持牌投顾意见。"
 };
