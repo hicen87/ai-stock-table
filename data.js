@@ -16,7 +16,7 @@ window.STOCK_TABLE_DATA = {
       evidence: "AI算力供不应求跑满产能；但capex已吞掉派息回购后94%经营现金流、转向发债" },
     { rank: 3,  segment: "GPU", vtype: "制造", scarcity: 8,  pool: 10, expand: 7, pricing: 8, status: "✅→⚠️", marginal: "🟡", leaders: "NVDA", fpe: "22.6", anchor2: "能见度：Blackwell+Rubin在手订单>$5000亿、实质售罄至2027；最新GM 74.1%守在72%线上（#9未触发）", priced: "🟢有原因", verdict: "先跑模块G", tier: "debate", sizeBand: "3-5%",
       evidence: "Rubin 6/1提前全面量产、7月首批交付；GM<72%或FY2 EPS 30天下修即证伪「便宜」" },
-    { rank: 4,  segment: "定制ASIC", vtype: "平台", scarcity: 8,  pool: 7,  expand: 7, pricing: 7, status: "✅", marginal: "🟢🟢", leaders: "AVGO", fpe: "23-37.6口径分歧", anchor2: "口径未统一：StockAnalysis FY27=22.9 vs NTM≈37.6；35x触发价以NTM口径为准（人工定）", priced: "🟡", verdict: "回调35x以下升级", tier: "watch", sizeBand: "0 → 触发后4-6%",
+    { rank: 4,  segment: "定制ASIC", vtype: "平台", scarcity: 8,  pool: 7,  expand: 7, pricing: 7, status: "✅", marginal: "🟢🟢", leaders: "AVGO", fpe: "25（人工核定）", anchor2: "Forward PE 25（Jacky 2026-07-10核定；此前多源分歧23-37.6）——已在35x升级线之下，2026-07-10人工升级入池；高波动取仓位下限，建仓前确认最近一季backlog未掉头（条款#2）", priced: "🟡", verdict: "升级入池·可建仓", tier: "debate", sizeBand: "4-6%（高波动取下限）",
       evidence: "ASIC迁入叙事：backlog环比与指引是唯一硬校验（条款#2）" },
     { rank: 5,  segment: "半导体设备", vtype: "设备", scarcity: 7,  pool: 8,  expand: 9, pricing: 8, status: "✅", marginal: "🟢", leaders: "ASML/AMAT", fpe: "62.7/48-52", anchor2: "能见度：ASML总backlog €388亿（EUV占过半）、EUV积压约45台；订单环比是capex最早领先信号。ASML FPE一周48→63抬升，离40x触发更远", priced: "🔴", verdict: "观察：40x以下", tier: "watch", sizeBand: "0 → 触发后4-6%",
       evidence: "EUV唯一供应商、High-NA排至2027末；Q2财报7-15为下一校验点（订单腰斩即#5触发）" },
