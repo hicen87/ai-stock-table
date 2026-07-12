@@ -1,0 +1,24 @@
+{
+  "note": "板块EPS修正方向序列（弱化版）。板块层面拿不到11个板块的一致EPS数值：FactSet周报PDF的板块EPS/FPE数据在图表图片里、文本不可提取（2026-07-12验证），SPDR官网JS渲染抓不稳，Zacks反爬。故只存PDF文本每周必给的方向信息：dollar-EPS上修/下修板块名单+被点名板块的CY26增速预期变化。够驱动EPS±信号，不够做精确修正幅度。",
+  "source": "FactSet Earnings Insight 当周PDF文本",
+  "history": [
+    {
+      "date": "2026-07-12",
+      "reportDate": "2026-07-10",
+      "spxForwardPE": 20.5,
+      "spxQ2Growth": 23.6,
+      "spxCY26Growth": 24.2,
+      "spxCY27Growth": 17.4,
+      "upSectors": ["能源", "信息技术", "材料"],
+      "upCount": 7,
+      "downSectors": ["医疗保健"],
+      "namedRevisions": {
+        "能源CY26增速": "7.7%(3/31) → 13.4%",
+        "信息技术CY26增速": "25.2-25.3%(3/31) → 30.7%",
+        "地产CY26增速": "34.9-35.7%(3/31) → 33.6%（下修）",
+        "医疗CY26增速": "8.1-9.0%(3/31) → 7.1%（下修）"
+      },
+      "sectorFpeExtremes": { "最高": "可选消费25.9/工业25.5", "最低": "能源12.9/金融15.4" }
+    }
+  ]
+}

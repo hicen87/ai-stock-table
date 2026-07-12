@@ -1,0 +1,27 @@
+{
+  "note": "个股NTM一致EPS修正序列。口径：StockAnalysis statistics页 Forward PE（NTM）与收盘价，隐含NTM EPS = price / forwardPE。每周append不改史；30/90天修正 = 与4/13周前对比。基线2026-07-12（部分标的当周未取到StockAnalysis口径，值为null，下周起统一补齐）。周期品（MU/000660.KS）仅展示不作判断。",
+  "tickers": ["TSM","MSFT","GOOGL","AMZN","NVDA","AVGO","ASML","AMAT","SNPS","CDNS","GEV","ETN","VRT","MU","000660.KS"],
+  "history": [
+    {
+      "date": "2026-07-12",
+      "priceAsOf": "2026-07-10",
+      "data": {
+        "TSM":  { "price": 434.11, "fpe": 22.24, "ntmEps": 19.52 },
+        "MSFT": { "price": null, "fpe": null, "ntmEps": null },
+        "GOOGL":{ "price": null, "fpe": null, "ntmEps": null },
+        "AMZN": { "price": null, "fpe": null, "ntmEps": null },
+        "NVDA": { "price": 210.96, "fpe": 21.19, "ntmEps": 9.96 },
+        "AVGO": { "price": 399.97, "fpe": 25.40, "ntmEps": 15.75 },
+        "ASML": { "price": null, "fpe": null, "ntmEps": null },
+        "AMAT": { "price": null, "fpe": null, "ntmEps": null },
+        "SNPS": { "price": 445.50, "fpe": 28.07, "ntmEps": 15.87 },
+        "CDNS": { "price": 384.17, "fpe": 47.20, "ntmEps": 8.14 },
+        "GEV":  { "price": null, "fpe": null, "ntmEps": null },
+        "ETN":  { "price": null, "fpe": null, "ntmEps": null },
+        "VRT":  { "price": 318.86, "fpe": 46.83, "ntmEps": 6.81 },
+        "MU":   { "price": null, "fpe": null, "ntmEps": null },
+        "000660.KS": { "price": null, "fpe": null, "ntmEps": null }
+      }
+    }
+  ]
+}

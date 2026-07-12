@@ -65,6 +65,6 @@ window.STOCK_TABLE_DATA = {
     "NVDA GM跌破72%或FY2 EPS 30天下修 → 「便宜」确认为陷阱",
     "GEV回调至FPE 35以下 → 升级为可分析对象"
   ],
-  dataNote: "估值：2026-07-12刷新（StockAnalysis为主锚、GuruFocus参照）· 本周变动：SNPS 36.3→28.1⚡跌破30x触发线（本周最大变化，待人工确认入池）；ASML 63→49.3回落、CDNS 37.7→47.2（多源口径漂移）、NVDA 22.6→21.2、TSM 22.8→22.2（GuruFocus口径29→27.8同步回落）、AVGO 25.4与人工核定25收敛、MU 6.3→10.5（股价上涨所致）· 基本面：MU FQ4指引GM约86%仍爬升+SK Hynix Q1 OM 72%创纪录（#1未触发）；SK Hynix放缓HBM4排产保DRAM利润（供给自律新信号）；NVDA GM 74.15%守线；四大hyperscaler 2026 capex $700-725B全线上调（#4未触发）；10Y利率4.56%近两月高位（中东+油价$92推升）· 下周密集校验点：ASML财报7-15（条款#5）、TSM财报7-16（条款#3与#8）",
+  dataNote: "估值：2026-07-12刷新（StockAnalysis为主锚、GuruFocus参照）· 本周变动：SNPS 36.3→28.1⚡跌破30x触发线（本周最大变化，待人工确认入池）；ASML 63→49.3回落、CDNS 37.7→47.2（多源口径漂移）、NVDA 22.6→21.2、TSM 22.8→22.2（GuruFocus口径29→27.8同步回落）、AVGO 25.4与人工核定25收敛、MU 6.3→10.5（股价上涨所致）· 基本面：MU FQ4指引GM约86%仍爬升+SK Hynix Q1 OM 72%创纪录（#1未触发）；SK Hynix放缓HBM4排产保DRAM利润（供给自律新信号）；NVDA GM 74.15%守线；四大hyperscaler 2026 capex $700-725B全线上调（#4未触发）；10Y利率4.56%近两月高位（中东+油价$92推升）· 下周密集校验点：ASML财报7-15（条款#5）、TSM财报7-16（条款#3与#8）· EPS修正序列（隐含NTM EPS=价格/FPE）自2026-07-12起每周积累于eps_history.json，满4周后marginal列将显示30天修正数字",
   disclaimer: "⚠️ 宏观判断置信度按低档处理；本表为参考区间非买卖建议；时机判断走模块B；非持牌投顾意见。"
 };
