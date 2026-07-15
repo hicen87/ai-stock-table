@@ -1,5 +1,5 @@
 window.STOCK_TABLE_DATA = {
-  asOf: "2026-07-12",
+  asOf: "2026-07-14",
   version: "v4.0",
   title: "全球AI产业链选股表",
   ruleNote: "潜力 = 质量（利润池持续性 × 边际变化）× 定价未充分程度。持续性 = 紧缺度 × 扩产难度 × 定价权（相乘，任一≤3判不可持续）。v4.0升级：①打分绑定硬数据口径（见打分锚点）；②估值按环节类型双锚（周期品禁用FPE排序）；③组合层敞口与对冲规则（见组合规则）；④潜力排名映射仓位档。质量分低频更新；估值列与依据列每周联网刷新。",
@@ -10,23 +10,23 @@ window.STOCK_TABLE_DATA = {
     "估值双锚（按环节类型）：平台/软件=FPE vs 自身5年中枢 + FCF yield；制造/设备=FPE + backlog能见度年数；周期品=毛利率历史分位 + P/B（禁用FPE排序，GM>80分位=顶部警戒）；未盈利/私有=不入排序"
   ],
   rows: [
-    { rank: 1,  segment: "先进制程+封装", vtype: "制造", scarcity: 9,  pool: 10, expand: 9, pricing: 9, status: "✅", marginal: "🟢", leaders: "TSM", fpe: "22.2（GuruFocus口径29.0→27.8回落，离#8触发30x拉开距离）", anchor2: "能见度：N2售罄至2028、CoWoS交期52-78周；N2报价约2×4nm", priced: "🟢", verdict: "核心池", tier: "core", sizeBand: "8-12%",
+    { rank: 1,  segment: "先进制程+封装", vtype: "制造", scarcity: 9,  pool: 10, expand: 9, pricing: 9, status: "✅", marginal: "🟢", leaders: "TSM", fpe: "22.5（StockAnalysis NTM；GuruFocus 27.8仅作参照）", anchor2: "能见度：N2售罄至2028、CoWoS交期52-78周；N2报价约2×4nm", priced: "🟢", verdict: "核心池", tier: "core", sizeBand: "8-12%",
       evidence: "CoWoS三厂售罄至2027、供需缺口2026末仍~10%；N2两厂2026全售罄、订单排至2028；7-16 Q2财报为CoWoS表述校验点（条款#3）" },
-    { rank: 2,  segment: "云服务平台", vtype: "平台", scarcity: 7,  pool: 10, expand: 7, pricing: 7, status: "✅", marginal: "🟢", leaders: "MSFT/GOOGL/AMZN", fpe: "20.8/27.0/27.4", anchor2: "风险锚：五巨头2030年折旧约$4000亿>2025合计利润（折旧吞噬监控中）", priced: "🟢", verdict: "核心池", tier: "core", sizeBand: "8-12%",
+    { rank: 2,  segment: "云服务平台", vtype: "平台", scarcity: 7,  pool: 10, expand: 7, pricing: 7, status: "✅", marginal: "🟢", leaders: "MSFT/GOOGL/AMZN", fpe: "21.1/28.2/29.4", anchor2: "风险锚：五巨头2030年折旧约$4000亿>2025合计利润（折旧吞噬监控中）", priced: "🟢", verdict: "核心池", tier: "core", sizeBand: "8-12%",
       evidence: "AI算力供不应求跑满产能；四巨头2026 capex合计$700-725B全线上调（MSFT/GOOGL各至$190B、AMZN $200B、META $125-145B）；capex吞噬现金流风险仍在，Meta上调当日跌9%是市场首次反抗信号" },
-    { rank: 3,  segment: "GPU", vtype: "制造", scarcity: 8,  pool: 10, expand: 7, pricing: 8, status: "✅→⚠️", marginal: "🟡", leaders: "NVDA", fpe: "21.2", anchor2: "能见度：Blackwell+Rubin在手订单>$5000亿、实质售罄至2027；GM 74.15%守在72%线上（#9未触发）、一致目标价$302隐含+43%无下修迹象", priced: "🟢有原因", verdict: "先跑模块G", tier: "debate", sizeBand: "3-5%",
+    { rank: 3,  segment: "GPU", vtype: "制造", scarcity: 8,  pool: 10, expand: 7, pricing: 8, status: "✅→⚠️", marginal: "🟡", leaders: "NVDA", fpe: "20.5", anchor2: "能见度：Blackwell+Rubin在手订单>$5000亿、实质售罄至2027；GM 74.15%守在72%线上（#9未触发）、一致目标价$302隐含+43%无下修迹象", priced: "🟢有原因", verdict: "先跑模块G", tier: "debate", sizeBand: "3-5%",
       evidence: "Rubin 6/1提前全面量产、7月首批交付；GM<72%或FY2 EPS 30天下修即证伪「便宜」；下一校验点8-26财报" },
     { rank: 4,  segment: "定制ASIC", vtype: "平台", scarcity: 8,  pool: 7,  expand: 7, pricing: 7, status: "✅", marginal: "🟢🟢", leaders: "AVGO", fpe: "25.4", anchor2: "StockAnalysis口径25.4与Jacky 2026-07-10人工核定25吻合、多源分歧收敛——确认在35x升级线之下；高波动取仓位下限，建仓前确认最近一季backlog未掉头（条款#2）", priced: "🟡", verdict: "升级入池·可建仓", tier: "debate", sizeBand: "4-6%（高波动取下限）",
       evidence: "ASIC迁入叙事：backlog环比与指引是唯一硬校验（条款#2）；6-3财报后无新数据，下一校验9月初财报" },
-    { rank: 5,  segment: "半导体设备", vtype: "设备", scarcity: 7,  pool: 8,  expand: 9, pricing: 8, status: "✅", marginal: "🟢", leaders: "ASML/AMAT", fpe: "49.3/38-52（多源分歧）", anchor2: "能见度：ASML总backlog €388亿（EUV占过半）、EUV积压约45台；订单环比是capex最早领先信号。ASML FPE 63→49回落但仍离40x触发有距离", priced: "🔴", verdict: "观察：40x以下", tier: "watch", sizeBand: "0 → 触发后4-6%",
+    { rank: 5,  segment: "半导体设备", vtype: "设备", scarcity: 7,  pool: 8,  expand: 9, pricing: 8, status: "✅", marginal: "🟢", leaders: "ASML/AMAT", fpe: "44.5/40.3", anchor2: "能见度：ASML总backlog €388亿（EUV占过半）、EUV积压约45台；订单环比是capex最早领先信号。ASML FPE已回落至44.5，仍高于40x观察线", priced: "🔴", verdict: "观察：40x以下", tier: "watch", sizeBand: "0 → 触发后4-6%",
       evidence: "EUV唯一供应商、High-NA排至2027末；Q2财报7-15（下周二）为下一校验点（订单腰斩即#5触发）" },
-    { rank: 6,  segment: "EDA/IP", vtype: "平台", scarcity: 5,  pool: 4,  expand: 9, pricing: 9, status: "✅", marginal: "🟢", leaders: "SNPS/CDNS", fpe: "28.1/47.2 ⚡SNPS已破30x触发线", anchor2: "双寡头订阅制、近零边际成本；SNPS FPE 36.3→28.1（52周股价-19%+Ansys并表摊薄EPS基数变化），首次跌破30x触发线——但需人工确认便宜是估值杀还是质量恶化（中国出口管制、Ansys整合）；CDNS 47.2仍贵", priced: "🟡", verdict: "观察：SNPS 30x以下（⚡已触发，待人工确认入池）", tier: "watch", sizeBand: "0 → 触发后4-6%",
+    { rank: 6,  segment: "EDA/IP", vtype: "平台", scarcity: 5,  pool: 4,  expand: 9, pricing: 9, status: "✅", marginal: "🟢", leaders: "SNPS/CDNS", fpe: "27.3/47.2 ⚡SNPS仍低于30x观察线", anchor2: "双寡头订阅制、近零边际成本；SNPS FPE降至27.3，继续低于30x观察线——仍需人工确认便宜是估值杀还是质量恶化（中国出口管制、Ansys整合）；CDNS 47.2仍贵", priced: "🟡", verdict: "观察：SNPS 30x以下（⚡已触发，待人工确认入池）", tier: "watch", sizeBand: "0 → 触发后4-6%",
       evidence: "设计活动随ASIC百花齐放而增；无交期概念、紧缺度天花板低；SNPS下一财报8月底、Ansys整合进展是确认关键" },
-    { rank: 7,  segment: "电力/能源基建", vtype: "设备", scarcity: 10, pool: 5,  expand: 9, pricing: 9, status: "✅", marginal: "🟢🟢", leaders: "GEV/ETN", fpe: "60-70/~32", anchor2: "能见度：GEV backlog+预留约100GW、售罄至2030；2026上半年新单价+10-20%/kW；GEV FPE 69.6（GuruFocus 7-8）距35x触发线仍近一倍", priced: "🔴", verdict: "观察：35x以下", tier: "watch", sizeBand: "0 → 触发后4-6%",
+    { rank: 7,  segment: "电力/能源基建", vtype: "设备", scarcity: 10, pool: 5,  expand: 9, pricing: 9, status: "✅", marginal: "🟢🟢", leaders: "GEV/ETN", fpe: "56.3/28.9", anchor2: "能见度：GEV backlog+预留约100GW、售罄至2030；2026上半年新单价+10-20%/kW；GEV FPE降至56.3，仍明显高于35x升级线", priced: "🔴", verdict: "观察：35x以下", tier: "watch", sizeBand: "0 → 触发后4-6%",
       evidence: "燃气轮机交付排至2028+、大锻件供应链>3年扩产周期；估值已充分计价是唯一障碍" },
-    { rank: 8,  segment: "散热/液冷", vtype: "制造", scarcity: 8,  pool: 4,  expand: 5, pricing: 6, status: "⚠️", marginal: "🟢", leaders: "VRT/2308.TW", fpe: "46.8（周环比持平）", anchor2: "CDU交期12-18个月但供应商池在扩，2年内可复制；VRT TTM营业利润率18.8%（条款#6监控中）", priced: "🟠", verdict: "暂不跟", tier: "out", sizeBand: "0",
+    { rank: 8,  segment: "散热/液冷", vtype: "制造", scarcity: 8,  pool: 4,  expand: 5, pricing: 6, status: "⚠️", marginal: "🟢", leaders: "VRT/2308.TW", fpe: "44.9", anchor2: "CDU交期12-18个月但供应商池在扩，2年内可复制；VRT TTM营业利润率18.8%（条款#6监控中）", priced: "🟠", verdict: "暂不跟", tier: "out", sizeBand: "0",
       evidence: "扩产难度5分卡在乘法及格线边缘；VRT营业利润率停止扩张即出局（条款#6）；7-29财报校验" },
-    { rank: 9,  segment: "HBM/存储", vtype: "周期", scarcity: 9,  pool: 8,  expand: 4, pricing: 6, status: "🔴", marginal: "🟢顶部预警", leaders: "000660.KS/MU", fpe: "~7/10.5（周期品禁用FPE排序）", anchor2: "周期锚：MU FQ3 GM 84.6%创纪录、FQ4指引约86%仍在环比爬升（#1毛利率下滑未触发）；SK Hynix Q1营业利润率72%创纪录=两家同处历史最高分位，教科书级周期顶特征；GM一旦掉头即顶部确认", priced: "⚠️陷阱", verdict: "规避新进（B类周期顶）", tier: "out", sizeBand: "0",
+    { rank: 9,  segment: "HBM/存储", vtype: "周期", scarcity: 9,  pool: 8,  expand: 4, pricing: 6, status: "🔴", marginal: "🟢顶部预警", leaders: "000660.KS/MU", fpe: "4.6/6.8（周期品仅展示）", anchor2: "周期锚：MU FQ3 GM 84.6%创纪录、FQ4指引约86%仍在环比爬升（#1毛利率下滑未触发）；SK Hynix Q1营业利润率72%创纪录=两家同处历史最高分位，教科书级周期顶特征；GM一旦掉头即顶部确认", priced: "⚠️陷阱", verdict: "规避新进（B类周期顶）", tier: "out", sizeBand: "0",
       evidence: "DRAM ASP 2Q26约+43%QoQ（UBS）、长约锁价；SK Hynix放缓HBM4排产转保DRAM利润=厂商开始主动调节供给的新信号；GM越高离顶越近，低PE=陷阱" },
     { rank: 10, segment: "大模型层", vtype: "不入排序", scarcity: 5,  pool: 1,  expand: 5, pricing: 4, status: "⚠️", marginal: "收入🟢利润🔴", leaders: "未上市/GOOGL", fpe: "—", anchor2: "现金流深度为负；$2.1万亿云backlog约一半来自OpenAI/Anthropic两家", priced: "—", verdict: "利润池为负", tier: "out", sizeBand: "0",
       evidence: "整链最大单一对手方风险源，监控其融资/续约而非投资它" },
@@ -65,6 +65,6 @@ window.STOCK_TABLE_DATA = {
     "NVDA GM跌破72%或FY2 EPS 30天下修 → 「便宜」确认为陷阱",
     "GEV回调至FPE 35以下 → 升级为可分析对象"
   ],
-  dataNote: "估值：2026-07-12刷新（StockAnalysis为主锚、GuruFocus参照）· 本周变动：SNPS 36.3→28.1⚡跌破30x触发线（本周最大变化，待人工确认入池）；ASML 63→49.3回落、CDNS 37.7→47.2（多源口径漂移）、NVDA 22.6→21.2、TSM 22.8→22.2（GuruFocus口径29→27.8同步回落）、AVGO 25.4与人工核定25收敛、MU 6.3→10.5（股价上涨所致）· 基本面：MU FQ4指引GM约86%仍爬升+SK Hynix Q1 OM 72%创纪录（#1未触发）；SK Hynix放缓HBM4排产保DRAM利润（供给自律新信号）；NVDA GM 74.15%守线；四大hyperscaler 2026 capex $700-725B全线上调（#4未触发）；10Y利率4.56%近两月高位（中东+油价$92推升）· 下周密集校验点：ASML财报7-15（条款#5）、TSM财报7-16（条款#3与#8）· EPS修正序列（隐含NTM EPS=价格/FPE）自2026-07-12起每周积累于eps_history.json，满4周后marginal列将显示30天修正数字",
+  dataNote: "2026-07-14隔日复核：StockAnalysis 7/13收盘后NTM FPE刷新。主要变动：TSM 22.2→22.5、NVDA 21.2→20.5、ASML 49.3→44.5、AMAT→40.3、SNPS 28.1→27.3、GEV→56.3、VRT 46.8→44.9；AVGO与CDNS持平25.4/47.2。本次仅追加EPS基线观测，距首期2天，不计算30/90天修正。质量分、tier、仓位与可证伪条款结论不变；等待ASML 7/15与TSM 7/16财报确认订单/CoWoS信号。",
   disclaimer: "⚠️ 宏观判断置信度按低档处理；本表为参考区间非买卖建议；时机判断走模块B；非持牌投顾意见。"
 };

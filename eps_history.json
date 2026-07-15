@@ -22,6 +22,27 @@
         "MU":   { "price": null, "fpe": null, "ntmEps": null },
         "000660.KS": { "price": null, "fpe": null, "ntmEps": null }
       }
+    },
+    {
+      "date": "2026-07-14",
+      "priceAsOf": "2026-07-13",
+      "data": {
+        "TSM":  { "price": 421.58, "fpe": 22.48, "ntmEps": 18.75 },
+        "MSFT": { "price": 390.99, "fpe": 21.11, "ntmEps": 18.52 },
+        "GOOGL":{ "price": 352.51, "fpe": 28.21, "ntmEps": 12.50 },
+        "AMZN": { "price": 247.31, "fpe": 29.36, "ntmEps": 8.42 },
+        "NVDA": { "price": 203.53, "fpe": 20.45, "ntmEps": 9.95 },
+        "AVGO": { "price": 384.05, "fpe": 25.40, "ntmEps": 15.12 },
+        "ASML": { "price": 1726.04, "fpe": 44.48, "ntmEps": 38.80 },
+        "AMAT": { "price": 575.39, "fpe": 40.34, "ntmEps": 14.26 },
+        "SNPS": { "price": 433.82, "fpe": 27.34, "ntmEps": 15.87 },
+        "CDNS": { "price": 377.92, "fpe": 47.20, "ntmEps": 8.01 },
+        "GEV":  { "price": 1042.60, "fpe": 56.31, "ntmEps": 18.52 },
+        "ETN":  { "price": 402.85, "fpe": 28.94, "ntmEps": 13.92 },
+        "VRT":  { "price": 305.87, "fpe": 44.92, "ntmEps": 6.81 },
+        "MU":   { "price": 937.00, "fpe": 6.82, "ntmEps": 137.39 },
+        "000660.KS": { "price": 1845000.00, "fpe": 4.58, "ntmEps": 402838.43 }
+      }
     }
   ]
 }

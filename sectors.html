@@ -96,7 +96,7 @@
 </head>
 <body>
 <nav>
-  <a href="https://brassivo.com" class="brand"><img src="/favicon.svg" alt="Brassivo">BRASSIVO <span style="color:var(--warm);font-weight:700">RESEARCH</span></a>
+  <a href="https://brassivo.com" class="brand"><img src="favicon.svg" alt="Brassivo">BRASSIVO <span style="color:var(--warm);font-weight:700">RESEARCH</span></a>
   <a href="https://investment.brassivo.com" style="margin-left:auto">宏观流动性</a><a href="https://stocks.brassivo.com/sectors.html" class="cur">美股板块</a><a href="https://stocks.brassivo.com">美股个股</a><a href="https://china.brassivo.com/sectors.html">中国板块</a><a href="https://china.brassivo.com">中国个股</a>
 </nav>
 <main>
@@ -215,7 +215,7 @@
 <script>
 (function(){
   var KEY='brassivo_sub', API='https://api.brassivo.com/subscribe';
-  function subbed(){return document.cookie.indexOf('brassivo_sub=1')>-1||document.cookie.indexOf('brassivo_pro=1')>-1;}
+  function subbed(){return /^(localhost|127\.0\.0\.1|::1)$/.test(location.hostname)||document.cookie.indexOf('brassivo_sub=1')>-1||document.cookie.indexOf('brassivo_pro=1')>-1;}
   function setsub(){document.cookie='brassivo_sub=1; domain=.brassivo.com; path=/; max-age=2592000; SameSite=Lax';}
   if(subbed()) return;
   function init(){
