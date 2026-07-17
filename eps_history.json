@@ -43,6 +43,28 @@
         "MU":   { "price": 937.00, "fpe": 6.82, "ntmEps": 137.39 },
         "000660.KS": { "price": 1845000.00, "fpe": 4.58, "ntmEps": 402838.43 }
       }
+    },
+    {
+      "date": "2026-07-17",
+      "priceAsOf": "2026-07-16",
+      "note": "7/16全市场大跌日收盘。TSM(7/16)与ASML(7/15)财报后EPS上修，FPE骤降属分母变动非估值杀。000660.KS为KRX延迟页，价格日2026-07-03（与上期7/14条目价格口径可能不连续，谨慎对比）。",
+      "data": {
+        "TSM":  { "price": 409.74, "fpe": 20.01, "ntmEps": 20.48 },
+        "MSFT": { "price": 401.10, "fpe": 21.65, "ntmEps": 18.53 },
+        "GOOGL":{ "price": 354.46, "fpe": 27.98, "ntmEps": 12.67 },
+        "AMZN": { "price": 249.89, "fpe": 29.87, "ntmEps": 8.37 },
+        "NVDA": { "price": 207.40, "fpe": 20.80, "ntmEps": 9.97 },
+        "AVGO": { "price": 374.45, "fpe": 23.76, "ntmEps": 15.76 },
+        "ASML": { "price": 1784.87, "fpe": 32.79, "ntmEps": 54.43 },
+        "AMAT": { "price": 560.93, "fpe": 37.55, "ntmEps": 14.94 },
+        "SNPS": { "price": 417.03, "fpe": 26.28, "ntmEps": 15.87 },
+        "CDNS": { "price": 364.65, "fpe": 44.83, "ntmEps": 8.13 },
+        "GEV":  { "price": 1036.22, "fpe": 56.33, "ntmEps": 18.40 },
+        "ETN":  { "price": 396.27, "fpe": 28.16, "ntmEps": 14.07 },
+        "VRT":  { "price": 294.11, "fpe": 43.04, "ntmEps": 6.83 },
+        "MU":   { "price": 853.20, "fpe": 5.95, "ntmEps": 143.39 },
+        "000660.KS": { "price": 2425000.00, "fpe": 6.27, "ntmEps": 386762.36 }
+      }
     }
   ]
 }
