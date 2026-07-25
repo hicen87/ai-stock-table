@@ -1,47 +1,183 @@
 {
   "note": "个股NTM一致EPS修正序列。口径：StockAnalysis statistics页 Forward PE（NTM）与收盘价，隐含NTM EPS = price / forwardPE。每周append不改史；30/90天修正 = 与4/13周前对比。基线2026-07-12（部分标的当周未取到StockAnalysis口径，值为null，下周起统一补齐）。周期品（MU/000660.KS）仅展示不作判断。",
-  "tickers": ["TSM","MSFT","GOOGL","AMZN","NVDA","AVGO","ASML","AMAT","SNPS","CDNS","GEV","ETN","VRT","MU","000660.KS"],
+  "tickers": [
+    "TSM",
+    "MSFT",
+    "GOOGL",
+    "AMZN",
+    "NVDA",
+    "AVGO",
+    "ASML",
+    "AMAT",
+    "SNPS",
+    "CDNS",
+    "GEV",
+    "ETN",
+    "VRT",
+    "MU",
+    "000660.KS"
+  ],
   "history": [
     {
       "date": "2026-07-12",
       "priceAsOf": "2026-07-10",
       "data": {
-        "TSM":  { "price": 434.11, "fpe": 22.24, "ntmEps": 19.52 },
-        "MSFT": { "price": null, "fpe": null, "ntmEps": null },
-        "GOOGL":{ "price": null, "fpe": null, "ntmEps": null },
-        "AMZN": { "price": null, "fpe": null, "ntmEps": null },
-        "NVDA": { "price": 210.96, "fpe": 21.19, "ntmEps": 9.96 },
-        "AVGO": { "price": 399.97, "fpe": 25.40, "ntmEps": 15.75 },
-        "ASML": { "price": null, "fpe": null, "ntmEps": null },
-        "AMAT": { "price": null, "fpe": null, "ntmEps": null },
-        "SNPS": { "price": 445.50, "fpe": 28.07, "ntmEps": 15.87 },
-        "CDNS": { "price": 384.17, "fpe": 47.20, "ntmEps": 8.14 },
-        "GEV":  { "price": null, "fpe": null, "ntmEps": null },
-        "ETN":  { "price": null, "fpe": null, "ntmEps": null },
-        "VRT":  { "price": 318.86, "fpe": 46.83, "ntmEps": 6.81 },
-        "MU":   { "price": null, "fpe": null, "ntmEps": null },
-        "000660.KS": { "price": null, "fpe": null, "ntmEps": null }
+        "TSM": {
+          "price": 434.11,
+          "fpe": 22.24,
+          "ntmEps": 19.52
+        },
+        "MSFT": {
+          "price": null,
+          "fpe": null,
+          "ntmEps": null
+        },
+        "GOOGL": {
+          "price": null,
+          "fpe": null,
+          "ntmEps": null
+        },
+        "AMZN": {
+          "price": null,
+          "fpe": null,
+          "ntmEps": null
+        },
+        "NVDA": {
+          "price": 210.96,
+          "fpe": 21.19,
+          "ntmEps": 9.96
+        },
+        "AVGO": {
+          "price": 399.97,
+          "fpe": 25.4,
+          "ntmEps": 15.75
+        },
+        "ASML": {
+          "price": null,
+          "fpe": null,
+          "ntmEps": null
+        },
+        "AMAT": {
+          "price": null,
+          "fpe": null,
+          "ntmEps": null
+        },
+        "SNPS": {
+          "price": 445.5,
+          "fpe": 28.07,
+          "ntmEps": 15.87
+        },
+        "CDNS": {
+          "price": 384.17,
+          "fpe": 47.2,
+          "ntmEps": 8.14
+        },
+        "GEV": {
+          "price": null,
+          "fpe": null,
+          "ntmEps": null
+        },
+        "ETN": {
+          "price": null,
+          "fpe": null,
+          "ntmEps": null
+        },
+        "VRT": {
+          "price": 318.86,
+          "fpe": 46.83,
+          "ntmEps": 6.81
+        },
+        "MU": {
+          "price": null,
+          "fpe": null,
+          "ntmEps": null
+        },
+        "000660.KS": {
+          "price": null,
+          "fpe": null,
+          "ntmEps": null
+        }
       }
     },
     {
       "date": "2026-07-14",
       "priceAsOf": "2026-07-13",
       "data": {
-        "TSM":  { "price": 421.58, "fpe": 22.48, "ntmEps": 18.75 },
-        "MSFT": { "price": 390.99, "fpe": 21.11, "ntmEps": 18.52 },
-        "GOOGL":{ "price": 352.51, "fpe": 28.21, "ntmEps": 12.50 },
-        "AMZN": { "price": 247.31, "fpe": 29.36, "ntmEps": 8.42 },
-        "NVDA": { "price": 203.53, "fpe": 20.45, "ntmEps": 9.95 },
-        "AVGO": { "price": 384.05, "fpe": 25.40, "ntmEps": 15.12 },
-        "ASML": { "price": 1726.04, "fpe": 44.48, "ntmEps": 38.80 },
-        "AMAT": { "price": 575.39, "fpe": 40.34, "ntmEps": 14.26 },
-        "SNPS": { "price": 433.82, "fpe": 27.34, "ntmEps": 15.87 },
-        "CDNS": { "price": 377.92, "fpe": 47.20, "ntmEps": 8.01 },
-        "GEV":  { "price": 1042.60, "fpe": 56.31, "ntmEps": 18.52 },
-        "ETN":  { "price": 402.85, "fpe": 28.94, "ntmEps": 13.92 },
-        "VRT":  { "price": 305.87, "fpe": 44.92, "ntmEps": 6.81 },
-        "MU":   { "price": 937.00, "fpe": 6.82, "ntmEps": 137.39 },
-        "000660.KS": { "price": 1845000.00, "fpe": 4.58, "ntmEps": 402838.43 }
+        "TSM": {
+          "price": 421.58,
+          "fpe": 22.48,
+          "ntmEps": 18.75
+        },
+        "MSFT": {
+          "price": 390.99,
+          "fpe": 21.11,
+          "ntmEps": 18.52
+        },
+        "GOOGL": {
+          "price": 352.51,
+          "fpe": 28.21,
+          "ntmEps": 12.5
+        },
+        "AMZN": {
+          "price": 247.31,
+          "fpe": 29.36,
+          "ntmEps": 8.42
+        },
+        "NVDA": {
+          "price": 203.53,
+          "fpe": 20.45,
+          "ntmEps": 9.95
+        },
+        "AVGO": {
+          "price": 384.05,
+          "fpe": 25.4,
+          "ntmEps": 15.12
+        },
+        "ASML": {
+          "price": 1726.04,
+          "fpe": 44.48,
+          "ntmEps": 38.8
+        },
+        "AMAT": {
+          "price": 575.39,
+          "fpe": 40.34,
+          "ntmEps": 14.26
+        },
+        "SNPS": {
+          "price": 433.82,
+          "fpe": 27.34,
+          "ntmEps": 15.87
+        },
+        "CDNS": {
+          "price": 377.92,
+          "fpe": 47.2,
+          "ntmEps": 8.01
+        },
+        "GEV": {
+          "price": 1042.6,
+          "fpe": 56.31,
+          "ntmEps": 18.52
+        },
+        "ETN": {
+          "price": 402.85,
+          "fpe": 28.94,
+          "ntmEps": 13.92
+        },
+        "VRT": {
+          "price": 305.87,
+          "fpe": 44.92,
+          "ntmEps": 6.81
+        },
+        "MU": {
+          "price": 937.0,
+          "fpe": 6.82,
+          "ntmEps": 137.39
+        },
+        "000660.KS": {
+          "price": 1845000.0,
+          "fpe": 4.58,
+          "ntmEps": 402838.43
+        }
       }
     },
     {
@@ -49,21 +185,163 @@
       "priceAsOf": "2026-07-16",
       "note": "7/16全市场大跌日收盘。TSM(7/16)与ASML(7/15)财报后EPS上修，FPE骤降属分母变动非估值杀。000660.KS为KRX延迟页，价格日2026-07-03（与上期7/14条目价格口径可能不连续，谨慎对比）。",
       "data": {
-        "TSM":  { "price": 409.74, "fpe": 20.01, "ntmEps": 20.48 },
-        "MSFT": { "price": 401.10, "fpe": 21.65, "ntmEps": 18.53 },
-        "GOOGL":{ "price": 354.46, "fpe": 27.98, "ntmEps": 12.67 },
-        "AMZN": { "price": 249.89, "fpe": 29.87, "ntmEps": 8.37 },
-        "NVDA": { "price": 207.40, "fpe": 20.80, "ntmEps": 9.97 },
-        "AVGO": { "price": 374.45, "fpe": 23.76, "ntmEps": 15.76 },
-        "ASML": { "price": 1784.87, "fpe": 32.79, "ntmEps": 54.43 },
-        "AMAT": { "price": 560.93, "fpe": 37.55, "ntmEps": 14.94 },
-        "SNPS": { "price": 417.03, "fpe": 26.28, "ntmEps": 15.87 },
-        "CDNS": { "price": 364.65, "fpe": 44.83, "ntmEps": 8.13 },
-        "GEV":  { "price": 1036.22, "fpe": 56.33, "ntmEps": 18.40 },
-        "ETN":  { "price": 396.27, "fpe": 28.16, "ntmEps": 14.07 },
-        "VRT":  { "price": 294.11, "fpe": 43.04, "ntmEps": 6.83 },
-        "MU":   { "price": 853.20, "fpe": 5.95, "ntmEps": 143.39 },
-        "000660.KS": { "price": 2425000.00, "fpe": 6.27, "ntmEps": 386762.36 }
+        "TSM": {
+          "price": 409.74,
+          "fpe": 20.01,
+          "ntmEps": 20.48
+        },
+        "MSFT": {
+          "price": 401.1,
+          "fpe": 21.65,
+          "ntmEps": 18.53
+        },
+        "GOOGL": {
+          "price": 354.46,
+          "fpe": 27.98,
+          "ntmEps": 12.67
+        },
+        "AMZN": {
+          "price": 249.89,
+          "fpe": 29.87,
+          "ntmEps": 8.37
+        },
+        "NVDA": {
+          "price": 207.4,
+          "fpe": 20.8,
+          "ntmEps": 9.97
+        },
+        "AVGO": {
+          "price": 374.45,
+          "fpe": 23.76,
+          "ntmEps": 15.76
+        },
+        "ASML": {
+          "price": 1784.87,
+          "fpe": 32.79,
+          "ntmEps": 54.43
+        },
+        "AMAT": {
+          "price": 560.93,
+          "fpe": 37.55,
+          "ntmEps": 14.94
+        },
+        "SNPS": {
+          "price": 417.03,
+          "fpe": 26.28,
+          "ntmEps": 15.87
+        },
+        "CDNS": {
+          "price": 364.65,
+          "fpe": 44.83,
+          "ntmEps": 8.13
+        },
+        "GEV": {
+          "price": 1036.22,
+          "fpe": 56.33,
+          "ntmEps": 18.4
+        },
+        "ETN": {
+          "price": 396.27,
+          "fpe": 28.16,
+          "ntmEps": 14.07
+        },
+        "VRT": {
+          "price": 294.11,
+          "fpe": 43.04,
+          "ntmEps": 6.83
+        },
+        "MU": {
+          "price": 853.2,
+          "fpe": 5.95,
+          "ntmEps": 143.39
+        },
+        "000660.KS": {
+          "price": 2425000.0,
+          "fpe": 6.27,
+          "ntmEps": 386762.36
+        }
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "priceAsOf": "2026-07-24",
+      "note": "7/24美股收盘。财报后EPS上修：GEV(7/22)+16.3%、GOOGL(7/22)+5.8%、TSM+3.4%。SNPS为纯股价杀跌（EPS未动）。MU NTM EPS首次回落-6.8%、AVGO -2.7%。000660.KS的KRX延迟页仍停在2026-07-03价格，与上期同值非新数据，谨慎对比；SK hynix Q2财报改期至7/29。距7/12基线仅13天，不足4周，本期不计算30/90天修正。",
+      "data": {
+        "TSM": {
+          "price": 403.41,
+          "fpe": 19.05,
+          "ntmEps": 21.18
+        },
+        "MSFT": {
+          "price": 381.7,
+          "fpe": 20.61,
+          "ntmEps": 18.52
+        },
+        "GOOGL": {
+          "price": 319.74,
+          "fpe": 23.85,
+          "ntmEps": 13.41
+        },
+        "AMZN": {
+          "price": 232.11,
+          "fpe": 27.75,
+          "ntmEps": 8.36
+        },
+        "NVDA": {
+          "price": 206.84,
+          "fpe": 20.76,
+          "ntmEps": 9.96
+        },
+        "AVGO": {
+          "price": 381.92,
+          "fpe": 24.9,
+          "ntmEps": 15.34
+        },
+        "ASML": {
+          "price": 1757.09,
+          "fpe": 32.0,
+          "ntmEps": 54.91
+        },
+        "AMAT": {
+          "price": 536.25,
+          "fpe": 35.9,
+          "ntmEps": 14.94
+        },
+        "SNPS": {
+          "price": 373.45,
+          "fpe": 23.53,
+          "ntmEps": 15.87
+        },
+        "CDNS": {
+          "price": 333.89,
+          "fpe": 40.57,
+          "ntmEps": 8.23
+        },
+        "GEV": {
+          "price": 1014.75,
+          "fpe": 47.41,
+          "ntmEps": 21.4
+        },
+        "ETN": {
+          "price": 404.07,
+          "fpe": 29.5,
+          "ntmEps": 13.7
+        },
+        "VRT": {
+          "price": 290.36,
+          "fpe": 42.5,
+          "ntmEps": 6.83
+        },
+        "MU": {
+          "price": 921.62,
+          "fpe": 6.9,
+          "ntmEps": 133.57
+        },
+        "000660.KS": {
+          "price": 2425000.0,
+          "fpe": 6.27,
+          "ntmEps": 386762.36
+        }
       }
     }
   ]
