@@ -425,6 +425,88 @@
           "ntmEps": 386762.36
         }
       }
+    },
+    {
+      "date": "2026-08-01",
+      "priceAsOf": "2026-07-31",
+      "note": "周六运行，7/31收盘价。口径说明：本周StockAnalysis页面估值比率多数滞后一天（按7/30收盘计算，NVDA/AMZN/AVGO/VRT为7/31收盘），故统一先用交叉验证（trailing PE×TTM EPS、市值/净利润反推比率基准价）提取一致NTM EPS，再按7/31收盘价重算fpe，保证price/fpe=ntmEps且EPS序列反映真实估计变动而非价格时点差。周环比EPS：AMZN财报后+9.3%（7/30盘后Q2：AWS+37%加速、AWS利润率36.8%同比+650bp、2026 capex上调至$2200亿）、ETN财报后(7/31盘前)+6.0%、VRT+1.7%、ASML+0.4%；MSFT/GOOGL/NVDA/AVGO/AMAT/SNPS/CDNS/GEV/MU基本持平。⚠️TSM -8.6%（页面FPE 17.75→19.48且比率基准价疑停在7/29，市值/PB/P-OCF多重交叉验证一致指向NTM EPS 21.11→19.30，属S&P数据源估计重整或FY窗口切换，非价格因素；GuruFocus参照口径25.91不可横比；已标记待人工复核，本行数据不作机械动作依据）。000660.KS KRX页仍停7/3价格（第4周），沿用非新数据。本周AI链全线反弹（AMZN+19.8%、AMAT+16.3%、ETN+14.7%、MU+11.4%、GEV+10.0%、TSM+7.9%周涨幅）。距7/12基线20天仍不足4周，本期不计算30/90天修正，marginal列不动（8/9后可启动30天修正）。",
+      "data": {
+        "TSM": {
+          "price": 404.25,
+          "fpe": 20.95,
+          "ntmEps": 19.3
+        },
+        "MSFT": {
+          "price": 464.72,
+          "fpe": 23.72,
+          "ntmEps": 19.59
+        },
+        "GOOGL": {
+          "price": 356.13,
+          "fpe": 26.82,
+          "ntmEps": 13.28
+        },
+        "AMZN": {
+          "price": 271.58,
+          "fpe": 29.62,
+          "ntmEps": 9.17
+        },
+        "NVDA": {
+          "price": 200.75,
+          "fpe": 20.11,
+          "ntmEps": 9.98
+        },
+        "AVGO": {
+          "price": 389.28,
+          "fpe": 24.7,
+          "ntmEps": 15.76
+        },
+        "ASML": {
+          "price": 1629.0,
+          "fpe": 29.17,
+          "ntmEps": 55.85
+        },
+        "AMAT": {
+          "price": 507.67,
+          "fpe": 33.98,
+          "ntmEps": 14.94
+        },
+        "SNPS": {
+          "price": 388.76,
+          "fpe": 24.5,
+          "ntmEps": 15.87
+        },
+        "CDNS": {
+          "price": 340.02,
+          "fpe": 39.63,
+          "ntmEps": 8.58
+        },
+        "GEV": {
+          "price": 990.29,
+          "fpe": 46.54,
+          "ntmEps": 21.28
+        },
+        "ETN": {
+          "price": 415.2,
+          "fpe": 27.85,
+          "ntmEps": 14.91
+        },
+        "VRT": {
+          "price": 241.57,
+          "fpe": 31.03,
+          "ntmEps": 7.79
+        },
+        "MU": {
+          "price": 823.03,
+          "fpe": 5.74,
+          "ntmEps": 143.39
+        },
+        "000660.KS": {
+          "price": 2425000.0,
+          "fpe": 6.27,
+          "ntmEps": 386762.36
+        }
+      }
     }
   ]
 }
