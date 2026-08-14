@@ -529,6 +529,28 @@
         "MU": { "price": 877.57, "fpe": 6.1, "ntmEps": 143.86 },
         "000660.KS": { "price": 1422000, "fpe": 3.43, "ntmEps": 414577.26 }
       }
+    },
+    {
+      "date": "2026-08-15",
+      "priceAsOf": "2026-08-14",
+      "note": "本期按StockAnalysis statistics页8/14 Forward PE与收盘价记录，并以Yahoo同日收盘逐只交叉核对；隐含NTM EPS=price/Forward PE。约30天修正取7/14观测作基线（32天）；AVGO隐含EPS单周-7.5%且无同期公司事件，标记估计窗口异常；AMAT单周+14.0%由8/13 Q3财报与指引上修解释。周期品MU/000660.KS序列仅展示。",
+      "data": {
+        "TSM": { "price": 426.35, "fpe": 19.22, "ntmEps": 22.18 },
+        "MSFT": { "price": 495.4, "fpe": 25.21, "ntmEps": 19.65 },
+        "GOOGL": { "price": 345.9, "fpe": 26.07, "ntmEps": 13.27 },
+        "AMZN": { "price": 262.65, "fpe": 28.54, "ntmEps": 9.2 },
+        "NVDA": { "price": 225.16, "fpe": 22.6, "ntmEps": 9.96 },
+        "AVGO": { "price": 392.99, "fpe": 26.51, "ntmEps": 14.82 },
+        "ASML": { "price": 1844.08, "fpe": 32.34, "ntmEps": 57.02 },
+        "AMAT": { "price": 507.18, "fpe": 28.89, "ntmEps": 17.56 },
+        "SNPS": { "price": 421.5, "fpe": 25.94, "ntmEps": 16.25 },
+        "CDNS": { "price": 324.82, "fpe": 37.72, "ntmEps": 8.61 },
+        "GEV": { "price": 1063.25, "fpe": 49.31, "ntmEps": 21.56 },
+        "ETN": { "price": 451.51, "fpe": 30.28, "ntmEps": 14.91 },
+        "VRT": { "price": 293.84, "fpe": 37.69, "ntmEps": 7.8 },
+        "MU": { "price": 971.66, "fpe": 6.61, "ntmEps": 147.0 },
+        "000660.KS": { "price": 1645000, "fpe": 3.98, "ntmEps": 413316.58 }
+      }
     }
   ]
 }
